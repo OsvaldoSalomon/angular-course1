@@ -123,6 +123,7 @@ export class AuthService {
     this.tokenExpirationTimer = null;
   }
 
+
   autoLogout(expirationDuration: number) {
     console.log(expirationDuration);
     this.tokenExpirationTimer = setTimeout(() => {
@@ -136,6 +137,7 @@ export class AuthService {
     token: string,
     expiresIn: number
   ) {
+
     const expirationDate = new Date(new Date().getTime() + expiresIn * 1000);
     // this.user.next(user);
     const user = new UserModel(email, userId, token, expirationDate);
@@ -148,6 +150,7 @@ export class AuthService {
     this.autoLogout(expiresIn * 1000);
     localStorage.setItem('userData', JSON.stringify(user));
   }
+
 
   private handleError(errorRes: HttpErrorResponse) {
     let errorMessage = 'An unknown error occurred!';
