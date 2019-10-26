@@ -26,9 +26,7 @@ const handleAuthentication = (
   userId: string,
   token: string
 ) => {
-  const expirationDate = new Date(
-    new Date().getTime() + expiresIn * 1000
-  );
+  const expirationDate = new Date(new Date().getTime() + expiresIn * 1000);
   const user = new UserModel(email, userId, token, expirationDate);
   localStorage.setItem('userData', JSON.stringify(user));
   return new AuthActions.AuthenticateSuccess({
@@ -64,30 +62,32 @@ export class AuthEffects {
   authSignup = this.actions$.pipe(
     ofType(AuthActions.SIGNUP_START),
     switchMap((signupAction: AuthActions.SignupStart) => {
-      return this.http.post<AuthResponseData>(
-      'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=' +
-        environment.firebaseAPIKey,
-        {
-          email: signupAction.payload.email,
-          password: signupAction.payload.password,
-          returnSecureToken: true
-        }
-      ).pipe(
-        tap(resData => {
-          this.authService.setLogoutTimer(+resData.expiresIn * 1000);
-        }),
-        map(resData => {
-          return handleAuthentication(
-            +resData.expiresIn,
-            resData.email,
-            resData.localId,
-            resData.idToken
-          );
-        }),
-        catchError(errorRes => {
-          return handleError(errorRes);
-        })
-      );
+      return this.http
+        .post<AuthResponseData>(
+          'https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=' +
+          environment.firebaseAPIKey,
+          {
+            email: signupAction.payload.email,
+            password: signupAction.payload.password,
+            returnSecureToken: true
+          }
+        )
+        .pipe(
+          tap(resData => {
+            this.authService.setLogoutTimer(+resData.expiresIn * 1000);
+          }),
+          map(resData => {
+            return handleAuthentication(
+              +resData.expiresIn,
+              resData.email,
+              resData.localId,
+              resData.idToken
+            );
+          }),
+          catchError(errorRes => {
+            return handleError(errorRes);
+          })
+        );
     })
   );
 
@@ -141,7 +141,7 @@ export class AuthEffects {
         id: string;
         _token: string;
         _tokenExpirationDate: string;
-      }  = JSON.parse(localStorage.getItem('userData'));
+      } = JSON.parse(localStorage.getItem('userData'));
       if (!userData) {
         return { type: 'DUMMY' };
       }
@@ -160,11 +160,12 @@ export class AuthEffects {
           new Date().getTime();
         this.authService.setLogoutTimer(expirationDuration);
         return new AuthActions.AuthenticateSuccess({
-            email: loadedUser.email,
-            userId: loadedUser.id,
-            token: loadedUser.token,
-            expirationDate: new Date(userData._tokenExpirationDate)
+          email: loadedUser.email,
+          userId: loadedUser.id,
+          token: loadedUser.token,
+          expirationDate: new Date(userData._tokenExpirationDate)
         });
+
         // const expirationDuration =
         //   new Date(userData._tokenExpirationDate).getTime() -
         //   new Date().getTime();
