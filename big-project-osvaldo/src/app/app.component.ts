@@ -1,7 +1,7 @@
-import {Component, OnInit} from '@angular/core';
-import {Store} from '@ngrx/store';
+import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
 
-import {LoggingService} from './logging.service';
+import { LoggingService } from './logging.service';
 import * as fromApp from './store/app.reducer';
 import * as AuthActions from './auth/store/auth.actions';
 
@@ -15,6 +15,7 @@ export class AppComponent implements OnInit {
     private store: Store<fromApp.AppState>,
     private loggingService: LoggingService
   ) {}
+
   ngOnInit() {
     this.store.dispatch(new AuthActions.AutoLogin());
     this.loggingService.printLog('Hello from AppComponent ngOnInit');
