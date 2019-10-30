@@ -31,7 +31,7 @@ export class RecipeEffects {
     })
   );
 
-  @Effect()
+  @Effect({dispatch: false})
   storeRecipes = this.actions$.pipe(
     ofType(RecipesActions.STORE_RECIPES),
     withLatestFrom(this.store.select('recipes')),
