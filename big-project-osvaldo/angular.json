@@ -4,10 +4,10 @@
   "newProjectRoot": "projects",
   "projects": {
     "big-project-osvaldo": {
-      "projectType": "application",
-      "schematics": {},
       "root": "",
+      "projectType": "application",
       "sourceRoot": "src",
+      "schematics": {},
       "prefix": "app",
       "architect": {
         "build": {
