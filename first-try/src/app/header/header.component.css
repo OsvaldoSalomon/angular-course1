@@ -13,9 +13,6 @@ li a {
   text-decoration: none;
 }
 
-menuHeader {
-
-}
 
 ul a:hover {
   background-color: #555;
@@ -28,8 +25,8 @@ body {
 }
 
 header {
-  background-color: #666;
-  padding: 10px;
+  background-color: #222222;
+  padding: 5px;
   text-align: center;
   font-size: 35px;
   color: white;

@@ -4,10 +4,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-shopping-list',
-  templateUrl: './shopping-list.component.html',
-  styleUrls: ['./shopping-list.component.css']
+  templateUrl: './tour.component.html',
+  styleUrls: ['./tour.component.css']
 })
-export class ShoppingListComponent implements OnInit {
+export class TourComponent implements OnInit {
   // ingredients: Ingredient[] = [
   //   new Ingredient('Apples', 5),
   //   new Ingredient('Tomatoes', 10),
