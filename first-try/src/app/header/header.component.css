@@ -4,6 +4,7 @@ ul {
   padding: 0;
   width: 200px;
   /*background-color: #f1f1f1;*/
+  align-content: center;
 }
 
 li a {
@@ -32,43 +33,5 @@ header {
   color: white;
 }
 
-section {
-  display: -webkit-flex;
-  display: flex;
-}
 
-nav {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  background: #ccc;
-  padding: 10px;
-}
 
-nav ul {
-  list-style-type: none;
-  padding: 10px;
-}
-
-article {
-  -webkit-flex: 4;
-  -ms-flex: 4;
-  flex: 4;
-  background-color: #f1f1f1;
-  padding: 40px;
-  margin-left: 20px;
-}
-
-footer {
-  background-color: #777;
-  padding: 10px;
-  text-align: center;
-  color: white;
-}
-
-@media (max-width: 600px) {
-  section {
-    -webkit-flex-direction: column;
-    flex-direction: column;
-  }
-}
