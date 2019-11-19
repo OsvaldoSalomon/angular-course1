@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { BandModel } from "./home.model";
+import { HomeModel } from "./home.model";
 
 @Component({
   selector: 'home-app',
