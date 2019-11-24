@@ -7,6 +7,7 @@ import { BandComponent } from "./band/band.component";
 import { TourComponent } from "./tour/tour.component";
 import {HomeComponent} from "./home/home.component";
 import {PlaylistComponent} from "./OwnPlayList/playlist.component";
+import {ContactComponent} from "./contact/contact.component";
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import {PlaylistComponent} from "./OwnPlayList/playlist.component";
     BandComponent,
     TourComponent,
     HomeComponent,
-    PlaylistComponent
+    PlaylistComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule
