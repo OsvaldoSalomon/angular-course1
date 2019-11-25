@@ -16,19 +16,20 @@ li a {
 
 ul a:hover {
   background-color: #555;
-  color: red;
+  color: darkred;
 }
 
 .edit:hover {
-   color: red;
+   color: darkred;
  }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  padding: 300px;
-  background: url("https://townsquare.media/site/366/files/2013/02/BMTH-Sempiternal.jpg?w=980&q=75");
-  background-size: cover;
-}
+/*body {*/
+/*  font-family: Arial, Helvetica, sans-serif;*/
+/*  padding: 100px;*/
+/*  background: url("https://cdn.dribbble.com/users/1150494/screenshots/6117720/amo_v2_2x.jpg");*/
+/*  background-size: auto;*/
+/*}*/
+
 
 header {
   background-color: #222222;
@@ -47,7 +48,7 @@ div.gallery {
 }
 
 div.gallery:hover {
-  border: 1px solid #777;
+  border: 1px solid darkred;
 }
 
 div.gallery img {
@@ -60,5 +61,8 @@ div.desc {
   text-align: center;
 }
 
+/*http://hammerworld.hu/images/upload/000abmthwembleycover.jpg?20110201-164743*/
+/*https://pbs.twimg.com/media/DyzAl1hWwAAPIAR.jpg*/
+/*https://upcomingvinyl.com/pics/covers/b/bring-me-the-horizon-amo-1.jpg*/
 
 
