@@ -1,15 +1,17 @@
 <body>
 <header class="edit">
-  <h2>Bring Me The Horizon</h2>
+  <a routerLink="/home" routerLinkActive="active"><h2>Bring Me The Horizon</h2></a>
 </header>
 <div class="top">
   <ul class="nav">
-    <li><a href="#" (click)="onSelect('band')">BAND</a></li>
-    <li><a href="#" (click)="onSelect('tour')">TOUR</a></li>
-    <li><a href="#">CONTACT</a></li>
-    <li><a href="#">MERCH</a></li>
+    <li routerLinkActive="active"><a routerLink="/band" href="#" >BAND</a></li>
+    <li routerLinkActive="active"><a routerLink="/tour" href="#" >TOUR</a></li>
+    <li routerLinkActive="active"><a routerLink="/contact" href="#">CONTACT</a></li>
+    <li routerLinkActive="active"><a routerLink="/merch" href="#">MERCH</a></li>
   </ul>
-  <app-header-content></app-header-content>
+  <router-outlet></router-outlet>
+  <home-app></home-app>
+
 </div>
 
 </body>

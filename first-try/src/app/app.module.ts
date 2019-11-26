@@ -8,14 +8,20 @@ import { TourComponent } from "./tour/tour.component";
 import {HomeComponent} from "./home/home.component";
 import {PlaylistComponent} from "./OwnPlayList/playlist.component";
 import {ContactComponent} from "./contact/contact.component";
-import {HeaderContent} from "./header/header-content.component/header-content.component";
+import { RouterModule, Routes } from '@angular/router';
 
+const appRoutes: Routes = [
+  { path: 'band', component: BandComponent },
+  { path: 'tour', component: TourComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'home', component: HomeComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full'}
+];
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    HeaderContent,
     BandComponent,
     TourComponent,
     HomeComponent,
@@ -23,14 +29,25 @@ import {HeaderContent} from "./header/header-content.component/header-content.co
     ContactComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true }
+    )
   ],
   providers: [],
   exports: [
-    HeaderContent
+    HomeComponent
   ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
 
 }
+
+//
+// {
+//   path: 'heroes',
+//     component: HeroListComponent,
+//   data: { title: 'Heroes List' }
+// },
