@@ -15,8 +15,8 @@ li a {
 
 
 ul a:hover {
-  background-color: #555;
-  color: darkred;
+  background-color: darkmagenta;
+  color: white;
 }
 
 .edit:hover {
@@ -24,11 +24,11 @@ ul a:hover {
  }
 
 h2:hover {
-  color: darkred;
+  color: darkmagenta;
 }
 
 h2 {
-  color: darkmagenta;
+  color: white;
 }
 
 /*body {*/

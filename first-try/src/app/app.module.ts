@@ -10,6 +10,7 @@ import {ContactComponent} from "./contact/contact.component";
 import { RouterModule, Routes } from '@angular/router';
 import { AlbumsComponent } from './albums/albums.component';
 import { AlbumsItemComponent } from './albums/albums-item/albums-item.component';
+import { MerchComponent } from './merch/merch.component';
 
 const appRoutes: Routes = [
   { path: 'band', component: BandComponent },
@@ -17,6 +18,7 @@ const appRoutes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'home', component: HomeComponent },
   { path: 'albums', component: AlbumsComponent },
+  { path: 'merch', component: MerchComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full'}
 ];
 
@@ -29,7 +31,8 @@ const appRoutes: Routes = [
     HomeComponent,
     ContactComponent,
     AlbumsComponent,
-    AlbumsItemComponent
+    AlbumsItemComponent,
+    MerchComponent
   ],
   imports: [
     BrowserModule,
