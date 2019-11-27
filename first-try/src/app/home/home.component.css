@@ -3,6 +3,7 @@ div.gallery {
   border: 3px solid #ccc;
   float: initial;
   width: 180px;
+  display: inline-block;
 }
 
 div.gallery:hover {
@@ -36,6 +37,24 @@ img.albumpic:hover {
   border: 4px solid darkmagenta;
 }
 
+img.albumpic {
+  border: 4px solid whitesmoke;
+}
+
 .letter {
   font-size: 60px;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+  color: whitesmoke;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  color: whitesmoke;
 }
