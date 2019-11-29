@@ -2,7 +2,7 @@ div.gallery {
   margin: 15px;
   border: 3px solid #ccc;
   float: initial;
-  width: 180px;
+  width: 230px;
   display: inline-block;
 }
 
@@ -18,5 +18,5 @@ div.gallery img {
 div.desc {
   padding: 15px;
   text-align: center;
-  display: inline;
+  display: inline-block;
 }
