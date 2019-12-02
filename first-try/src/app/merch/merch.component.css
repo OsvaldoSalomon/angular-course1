@@ -20,3 +20,17 @@ div.desc {
   text-align: center;
   display: inline-block;
 }
+
+h2 {
+  text-align: center;
+  font-family: "Old English Text MT";
+}
+
+div.images {
+  padding-left: 15px;
+}
+
+a.image-clothes {
+  width: 230px;
+  height: 150px;
+}

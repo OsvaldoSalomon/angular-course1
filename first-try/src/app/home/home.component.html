@@ -12,9 +12,9 @@
       <div class="column ">
         <h2>Who are we?</h2>
         <p>Bring Me the Horizon is an English rock band formed in Sheffield in 2004.</p>
-        <div class="gallery">
+        <div class="gallery" routerLinkActive="active">
           <a>
-            <img src="https://blog.richersounds.com/wp-content/uploads/2019/01/BMTH1_b4b62e6b8feb204f329c1700ab8c6c4a.jpg" width="600" height="400">
+            <img src="https://blog.richersounds.com/wp-content/uploads/2019/01/BMTH1_b4b62e6b8feb204f329c1700ab8c6c4a.jpg" routerLink="/band" width="600" height="400">
           </a>
           <div class="desc">BMTH</div>
         </div>
@@ -23,9 +23,9 @@
       <div class="column">
         <h2>Recent news</h2>
         <p>Listen to Ludens the new single released for the very successful game Death Stranding</p>
-        <div class="gallery">
+        <div class="gallery" routerLinkActive="active">
           <a>
-            <img src="https://m.media-amazon.com/images/I/51XJpPmsqWL._SS500_.jpg" width="600" height="400">
+            <img src="https://m.media-amazon.com/images/I/51XJpPmsqWL._SS500_.jpg" routerLink="/albums" width="600" height="400">
           </a>
           <div class="desc">Listen to Ludens</div>
         </div>
@@ -34,9 +34,9 @@
       <div class="column">
         <h2>Members</h2>
         <p>The group consists of lead vocalist Oliver Sykes, guitarist Lee Malia, bassist Matt Kean, drummer Matt Nicholls and keyboardist Jordan Fish.</p>
-        <div class="gallery">
+        <div class="gallery" routerLinkActive="active">
           <a>
-            <img src="https://www.rocksound.tv/assets/uploads/Bring-Me-The-Horizon-2018-crop-920x584.jpg" width="600" height="400">
+            <img src="https://www.rocksound.tv/assets/uploads/Bring-Me-The-Horizon-2018-crop-920x584.jpg" routerLink="/band" width="600" height="400">
           </a>
           <div class="desc">Members</div>
         </div>
@@ -81,9 +81,30 @@
 
 <footer class="container padding-32 dark-grey">
   <div class="row-padding">
-    <div class="third">
-      <h3>FOOTER</h3>
-      <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+    <div style="margin:20px 16px 18px 26px">
+      <h2 class="contact">CONTACT</h2>
+      <p><i>Fan? Drop a note!</i></p>
+      <div>
+        <div>
+          <i style="width:30px"></i> Steel City, UK<br>
+          <i style="width:30px"></i> Phone: +00 151515<br>
+          <i style="width:30px"></i> Email: mail@mail.com<br>
+        </div>
+        <div class="col m6">
+          <form action="/action_page.php" target="_blank">
+            <div style="margin:10px 16px 8px 16px">
+              <div>
+                <input type="text" style="border-radius: 10px"  placeholder="Name" required name="Name">
+              </div>
+              <div>
+                <input type="text" style="border-radius: 10px" placeholder="Email" required name="Email">
+              </div>
+            </div>
+            <input style="margin:10px 16px 8px 16px" style="border-radius: 10px" type="text" placeholder="Message" required name="Message">
+            <button class="btn btn-primary" >SEND</button>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
 </footer>
