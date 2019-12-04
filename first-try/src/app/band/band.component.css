@@ -10,6 +10,16 @@ body {
   color: whitesmoke;
 }
 
-h2 {
+div.desc {
+  font-family: "Franklin Gothic Medium";
+  padding-top: 137px;
+}
 
+div.albumDesc {
+  font-family: "Franklin Gothic Medium";
+  color: aliceblue;
+}
+
+p {
+  color: aliceblue;
 }
